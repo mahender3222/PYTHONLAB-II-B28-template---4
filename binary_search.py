@@ -9,7 +9,18 @@ import unittest
 # Return the output, No need read input or print the ouput
 
 def binary_search(lst,key):
-    pass
+     lst.sort()
+    low = 0
+    high = len(lst)-1
+    while low<=high:
+        middle=(low+high)//2
+        if lst[middle] == key:
+            return(middle)
+        elif key<lst[middle]:
+            high = middle-1
+        else:
+            low = middle+1
+    return(-1)
      
 # DO NOT TOUCH THE BELOW CODE
 class TestBinarySearch(unittest.TestCase):
