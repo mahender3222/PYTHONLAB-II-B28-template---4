@@ -10,7 +10,11 @@ import unittest
 # Return the output, No need read input or print the ouput
 
 def linear_search(lst,key):
-    pass
+    def linear_search(lst,key):
+    for i in range(len(lst)):
+        if key == lst[i]:
+            return(i)
+    return(-1)
      
 class TestLinearSearch(unittest.TestCase): 
 
